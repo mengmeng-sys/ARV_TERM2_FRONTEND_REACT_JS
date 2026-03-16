@@ -1,0 +1,71 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.imageWrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: var(--card-bg);
+}
+
+.swatch {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .swatch {
+  transform: scale(1.04);
+}
+
+.addBtn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 8px 18px;
+  border-radius: 50px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s;
+}
+
+.addBtnVisible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.addBtnDone {
+  background: #2d7a4f;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 2px;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--fg);
+}
+
+.price {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+}

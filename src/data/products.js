@@ -1,0 +1,31 @@
+export const products = {
+  men: [
+    { id: 1, name: 'Faded Tee-shirt', price: 30, category: 'men', color: '#3a3a38', img: null },
+    { id: 2, name: 'Faded Brown Tee-shirt', price: 30, category: 'men', color: '#8b6f5e', img: null },
+    { id: 3, name: 'Faded Blue Tee-shirt', price: 30, category: 'men', color: '#3a5f8a', img: null },
+    { id: 4, name: 'Faded Green Tee-shirt', price: 30, category: 'men', color: '#2d5040', img: null },
+    { id: 5, name: 'Black Cropped Tanktop', price: 30, category: 'men', color: '#222222', img: null },
+    { id: 6, name: 'Faded Hoodie', price: 50, category: 'men', color: '#1a1a1a', img: null },
+    { id: 7, name: 'Faded Grey Hoodie', price: 50, category: 'men', color: '#555555', img: null },
+    { id: 8, name: 'Grey Sweater', price: 50, category: 'men', color: '#aaaaaa', img: null },
+    { id: 9, name: 'Light Grey Zipup', price: 50, category: 'men', color: '#cccccc', img: null },
+    { id: 10, name: 'Black Long Sleeve', price: 30, category: 'men', color: '#2a2a2a', img: null },
+  ],
+  women: [
+    { id: 11, name: 'Faded Crop Tee', price: 30, category: 'women', color: '#c4a882', img: null },
+    { id: 12, name: 'Dusty Rose Tee', price: 30, category: 'women', color: '#c9a0a0', img: null },
+    { id: 13, name: 'Sage Green Top', price: 30, category: 'women', color: '#8a9e82', img: null },
+    { id: 14, name: 'Cream Ribbed Tee', price: 30, category: 'women', color: '#e8e0d0', img: null },
+    { id: 15, name: 'Oversized Hoodie', price: 55, category: 'women', color: '#b8b8b8', img: null },
+    { id: 16, name: 'Cropped Sweatshirt', price: 45, category: 'women', color: '#888888', img: null },
+    { id: 17, name: 'Fitted Long Sleeve', price: 35, category: 'women', color: '#333333', img: null },
+    { id: 18, name: 'Knit Zip Pullover', price: 55, category: 'women', color: '#d4c4b0', img: null },
+  ],
+  extras: [
+    { id: 19, name: 'Logo Cap', price: 25, category: 'extras', color: '#222222', img: null },
+    { id: 20, name: 'Tote Bag', price: 20, category: 'extras', color: '#e8e8e5', img: null },
+    { id: 21, name: 'Beanie', price: 22, category: 'extras', color: '#555555', img: null },
+    { id: 22, name: 'Canvas Shopper', price: 28, category: 'extras', color: '#c8b89a', img: null },
+    { id: 23, name: 'Keychain', price: 12, category: 'extras', color: '#111111', img: null },
+  ],
+}

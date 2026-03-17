@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Root ── */
+.reg-root {
+  min-height: 100vh;
+  background: #f5f4f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  padding: 32px 16px;
+}
+
+/* ── Card ── */
+.reg-card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 820px;
+  display: flex;
+  overflow: hidden;
+  min-height: 560px;
+}
+
+/* ────────────────────────────
+   Left: Form Panel
+──────────────────────────── */
+.reg-form-panel {
+  flex: 1;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+  margin-bottom: 6px;
+}
+
+.reg-subtitle {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 28px;
+  letter-spacing: 0.01em;
+}
+
+.reg-subtitle a {
+  color: #1a1a1a;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ── Field Grid ── */
+.field-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.field.no-mb {
+  margin-bottom: 0;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.field label span {
+  color: #e05b5b;
+  margin-left: 1px;
+}
+
+/* ── Input Wrapper ── */
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #bbb;
+  display: flex;
+  pointer-events: none;
+}
+
+.input-eye {
+  position: absolute;
+  right: 12px;
+  color: #bbb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  transition: color 0.15s;
+}
+
+.input-eye:hover {
+  color: #666;
+}
+
+/* ── Inputs ── */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  height: 42px;
+  background: #f7f7f5;
+  border: 1.5px solid #ebebeb;
+  border-radius: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  color: #1a1a1a;
+  padding: 0 36px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input:focus {
+  border-color: #b0a090;
+  background: #fff;
+}
+
+/* ── Terms Row ── */
+.terms-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 14px 0 20px;
+}
+
+.terms-row input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: #1a1a1a;
+  margin-top: 1px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+}
+
+.terms-row span {
+  font-size: 12px;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.terms-row a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ── Submit Button ── */
+.btn-register {
+  width: 100%;
+  height: 44px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-register:hover {
+  background: #333;
+}
+
+.btn-register:active {
+  transform: scale(0.99);
+}
+
+/* ────────────────────────────
+   Right: Image Panel
+──────────────────────────── */
+.reg-image-panel {
+  width: 280px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.reg-image-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.reg-image-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+.image-label {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.image-label span {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .reg-image-panel {
+    display: none;
+  }
+
+  .reg-form-panel {
+    padding: 36px 24px;
+  }
+}

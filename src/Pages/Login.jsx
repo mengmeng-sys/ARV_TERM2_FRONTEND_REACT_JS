@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "../Style/Signin.module.css"
+import { Link } from 'react-router-dom'
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -25,7 +26,9 @@ export default function SignIn() {
 
           <p className={styles.registerText}>
             does not have account ?{" "}
-            <a href="#" className={styles.registerLink}>Register.</a>
+            <Link to="/Register">
+              <a href="#" className={styles.registerLink}>Register.</a>
+            </Link>
           </p>
 
           <div className={styles.inputGroup}>

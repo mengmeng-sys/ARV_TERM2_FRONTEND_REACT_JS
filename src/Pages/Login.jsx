@@ -52,7 +52,7 @@ export default function SignIn() {
           </div>
 
           <div className={styles.forgotWrapper}>
-            <a href="#" className={styles.forgotLink}>Forgot password ?</a>
+            <Link to="/ForgotPassword"><a href="#" className={styles.forgotLink}>Forgot password ?</a></Link>
           </div>
 
           <div className={styles.btnWrapper}>

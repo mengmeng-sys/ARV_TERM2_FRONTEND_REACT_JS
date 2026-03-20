@@ -19,11 +19,9 @@ export default function ProductCard({ product, onAddToCart }) {
       onMouseLeave={() => setHovered(false)}
     >
       <div className={styles.imageWrap}>
-        {/* Placeholder swatch since we have no actual images */}
-        <div
-          className={styles.swatch}
-          style={{ background: product.color }}
-        />
+          {product.img ? (<img src={product.img} alt={product.name} className={styles.productImage}/>
+          ):(
+          <div className={styles.swatch} style={{ background: product.color }} />)}
         <button
           className={`${styles.addBtn} ${hovered ? styles.addBtnVisible : ''} ${added ? styles.addBtnDone : ''}`}
           onClick={handleAdd}

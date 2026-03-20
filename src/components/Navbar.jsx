@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const ARVLogo = () => (
   <div className={styles.logoGroup}>
-    <img className={styles.ARVLogo} src='../../public/Logo.png'/>
+    <img className={styles.ARVLogo} src='/Logo.png'/>
     <span className={styles.logoText}>ARV</span>
   </div>
 )

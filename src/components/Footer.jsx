@@ -7,7 +7,7 @@ export default function Footer() {
       <div className={styles.inner}>
         <div className={styles.brand}>
           <div className={styles.logoRow}>
-            <img className={styles.ARVLogo} src='../../public/Logo.png'/>
+            <img className={styles.ARVLogo} src='/Logo.png'/>
             <span className={styles.logoText}>ARV</span>
           </div>
           <p className={styles.tagline}>Arrive in Style</p>
@@ -15,7 +15,7 @@ export default function Footer() {
             Why can't comfort look this good? ARV was built to bridge the gap between effortless style and uncompromising quality.
           </p>
           <div className={styles.social}>
-            {['../../public/facebook-app-symbol.png', '../../public/instagram.png', '../../public/telegram.png'].map((imgSrc, index) => (
+            {['/facebook-app-symbol.png', '/instagram.png', '/telegram.png'].map((imgSrc, index) => (
               <a key={index} href="#" className={styles.socialLink}>
                 <img src={imgSrc} alt={`Social ${index + 1}`} />
               </a>))}

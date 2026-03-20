@@ -1,7 +1,7 @@
 export const products = {
   men: [
-    { id: 1, name: 'Faded Tee-shirt', price: 30, category: 'men', color: '#3a3a38', img: null },
-    { id: 2, name: 'Faded Brown Tee-shirt', price: 30, category: 'men', color: '#8b6f5e', img: null },
+    { id: 1, name: 'Faded Tee-shirt', price: 30, category: 'men', color: '#3a3a38', img: '/products/Men/fadedblackshirt.png' },
+    { id: 2, name: 'Faded Brown Tee-shirt', price: 30, category: 'men', color: '#8b6f5e', img:'/products/Men/FadedBrownShirt.png' },
     { id: 3, name: 'Faded Blue Tee-shirt', price: 30, category: 'men', color: '#3a5f8a', img: null },
     { id: 4, name: 'Faded Green Tee-shirt', price: 30, category: 'men', color: '#2d5040', img: null },
     { id: 5, name: 'Black Cropped Tanktop', price: 30, category: 'men', color: '#222222', img: null },

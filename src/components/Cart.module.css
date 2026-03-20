@@ -146,3 +146,11 @@
 }
 
 .checkout:hover { opacity: 0.8; }
+
+.itemImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}

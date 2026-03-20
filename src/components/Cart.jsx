@@ -20,7 +20,9 @@ export default function Cart({ items, onClose, onRemove }) {
             <ul className={styles.items}>
               {items.map(item => (
                 <li key={item.id} className={styles.item}>
-                  <div className={styles.swatch} style={{ background: item.color }} />
+                  {item.img ? (<img src={item.img} alt={item.name} className={styles.itemImage}/>
+                  ):(
+                  <div className={styles.swatch} style={{ background: item.color }}/>)}
                   <div className={styles.itemInfo}>
                     <span className={styles.itemName}>{item.name}</span>
                     <span className={styles.itemPrice}>${item.price} × {item.qty}</span>

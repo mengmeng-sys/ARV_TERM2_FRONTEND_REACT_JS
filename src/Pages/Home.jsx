@@ -1,12 +1,12 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-function AboutPage(){
- return(
+function HomePage(){
+ return (
   <>
-  <Navbar/>
-   <p>hello from About page</p>
+   <Navbar/>
+    <p>hello from home page</p>
    <Footer/>
   </>
  )
 }
-export default AboutPage;
+export default HomePage;

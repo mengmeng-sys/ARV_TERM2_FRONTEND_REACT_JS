@@ -4,7 +4,7 @@ export default function ContactPage(){
  return(
   <>
     <Navbar/>
-    <p>hello world</p>
+    <p>hello from contact</p>
     <Footer/>
   </>
  )

@@ -18,11 +18,11 @@ export default function Navbar({ cartCount, onCartOpen }) {
         <div className={styles.left}>
           <Link to="/" className={styles.navLink}>Home</Link>
 
-          <Link to="/" className={styles.navLink} >
+          <Link to="/CatalogPage" className={styles.navLink} >
             Catalog
           </Link>
 
-          <Link to="/about" className={styles.navLink}>
+          <Link to="/AboutPage" className={styles.navLink}>
             About
           </Link>
 

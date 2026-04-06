@@ -22,7 +22,7 @@ export default function UserProfile() {
     setUser(u);
   }, []);
 
-  const handleChange = (e) => { setUser({ ...user, [e.target.name]: e.target.value }); setSaved(false); };
+  const handleChange = (e) => { setUser({ ...user, [e.target.name]: e.target.value }); setSaved(false); }; // if we change something inside your profile
 
   const handleSave = () => {
     updateUser(user.id, user);

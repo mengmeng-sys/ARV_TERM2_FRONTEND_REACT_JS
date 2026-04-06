@@ -12,7 +12,7 @@ export default function SignIn() {
   const [error, setError]       = useState("");
 
   const handleSubmit = () => {
-    if (!email || !password) { setError("Please enter your email and password."); return; }
+    if (!email || !password) { setError("Please enter your email and password."); return; } // if
     const result = login(email, password);
     if (result.error) { setError(result.error); return; }
     if (result.user.role === "admin") navigate("/admin");

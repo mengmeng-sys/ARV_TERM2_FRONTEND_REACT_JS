@@ -10,7 +10,10 @@ export default function AdminUsers() {
   const [form, setForm]     = useState({})
   const [confirm, setConfirm] = useState(null)
 
-  const reload = () => setUsers(getUsers())
+  const reload = () => {
+  const data = JSON.parse(localStorage.getItem("arv_users")) || []
+  setUsers(data)
+}
   useEffect(() => { reload() }, [])
 
   const filtered = users.filter(u =>

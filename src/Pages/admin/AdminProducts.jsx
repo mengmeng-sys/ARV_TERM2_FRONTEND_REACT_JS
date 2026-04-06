@@ -14,7 +14,10 @@ export default function AdminProducts() {
   const [search, setSearch]     = useState('')
   const [confirm, setConfirm]   = useState(null)
 
-  const reload = () => setProducts(getProducts())
+  const reload = () => {
+  const data = JSON.parse(localStorage.getItem("arv_products")) || []
+  setProducts(data)
+}
 
   useEffect(() => { reload() }, [])
 

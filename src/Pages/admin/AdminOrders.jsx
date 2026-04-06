@@ -20,7 +20,10 @@ export default function AdminOrders() {
   const [confirm, setConfirm] = useState(null)
   const [addDemo, setAddDemo] = useState(false)
 
-  const reload = () => setOrders(getOrders())
+ const reload = () => {
+  const data = JSON.parse(localStorage.getItem("arv_orders")) || []
+  setOrders(data)
+}
   useEffect(() => { reload() }, [])
 
   const filtered = orders.filter(o => {

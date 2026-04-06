@@ -16,7 +16,7 @@ export default function AdminLayout({ children, title }) {
   const user      = getCurrentUser()
   const [collapsed, setCollapsed] = useState(false)
 
-  const handleLogout = () => { logout(); navigate('/SignIn') }
+  const handleLogout = () => { logout(); navigate('/SignIn') } // go back to sign in page
 
   return (
     <div className={styles.shell}>

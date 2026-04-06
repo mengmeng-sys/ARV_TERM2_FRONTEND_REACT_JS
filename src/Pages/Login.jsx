@@ -28,6 +28,7 @@ export default function SignIn() {
           <p className={styles.registerText}>
             Does not have account?{" "}
             <Link to="/Register"><a href="#" className={styles.registerLink}>Register.</a></Link>
+            {/* link to register */}
           </p>
           <div className={styles.inputGroup}>
             <input type="email" placeholder="Mail" value={email}

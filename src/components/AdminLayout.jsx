@@ -4,10 +4,10 @@ import { logout, getCurrentUser } from '../data/store.js'
 import styles from '../Style/admin/AdminLayout.module.css'
 
 const NAV = [
-  { label: 'Dashboard',  path: '/admin',          icon: '▦' },
-  { label: 'Products',   path: '/admin/products',  icon: '👕' },
-  { label: 'Orders',     path: '/admin/orders',    icon: '📦' },
-  { label: 'Customers',  path: '/admin/users',     icon: '👥' },
+  { label: 'Dashboard',  path: '/admin',          icon: '' },
+  { label: 'Products',   path: '/admin/products',  icon: '' },
+  { label: 'Orders',     path: '/admin/orders',    icon: '' },
+  { label: 'Customers',  path: '/admin/users',     icon: '' },
 ]
 
 export default function AdminLayout({ children, title }) {

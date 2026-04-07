@@ -32,10 +32,10 @@ export default function AdminDashboard() {
     <AdminLayout title="Dashboard">
       {/* ── Stats row ── */}
       <div className={styles.statsRow}>
-        <StatCard icon="💰" label="Total Revenue"   value={`$${revenue}`}         color="#10b981" />
-        <StatCard icon="📦" label="Total Orders"    value={orders.length}          color="#3b82f6" sub={`${pending} pending`} />
-        <StatCard icon="👥" label="Customers"       value={users.length}           color="#8b5cf6" />
-        <StatCard icon="👕" label="Products"        value={products.length}        color="#8B5E4A" />
+        <StatCard icon="" label="Total Revenue"   value={`$${revenue}`}         color="#10b981" />
+        <StatCard icon="" label="Total Orders"    value={orders.length}          color="#3b82f6" sub={`${pending} pending`} />
+        <StatCard icon="" label="Customers"       value={users.length}           color="#8b5cf6" />
+        <StatCard icon="" label="Products"        value={products.length}        color="#8B5E4A" />
       </div>
 
       {/* ── Quick links ── */}
@@ -44,7 +44,7 @@ export default function AdminDashboard() {
           { to: '/admin/products', label: '+ Add Product',  bg: '#8B5E4A' },
           { to: '/admin/users',    label: '→ View Customers', bg: '#3b82f6' },
           { to: '/admin/orders',   label: '→ Manage Orders', bg: '#10b981' },
-          { to: '/',               label: '🏪 View Store',    bg: '#555' },
+          { to: '/',               label: ' View Store',    bg: '#555' },
         ].map(q => (
           <Link key={q.to} to={q.to} className={styles.quickBtn} style={{ background: q.bg }}>
             {q.label}

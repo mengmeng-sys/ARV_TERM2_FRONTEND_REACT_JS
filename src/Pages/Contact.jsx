@@ -4,8 +4,8 @@ import Footer from '../components/Footer'
 import styles from '../Style/Contact.module.css'
 
 const faqs = [
-  { q: 'How long does shipping take?', a: 'Standard shipping takes 5–8 business days. Express (2–3 days) is available at checkout.' },
-  { q: 'Do you ship internationally?', a: 'Yes — we ship to most countries. International orders typically arrive within 10–15 business days.' },
+  { q: 'How long does shipping take?', a: 'Standard shipping takes 5-8 business days. Express (2-3 days) is available at checkout.' },
+  { q: 'Do you ship internationally?', a: 'Yes — we ship to most countries. International orders typically arrive within 10-15 business days.' },
   { q: 'What is your return policy?', a: 'We accept returns within 30 days of delivery. Items must be unworn and in original condition.' },
   { q: 'How do I find my size?', a: 'Check our Size Guide in the Catalog. ARV pieces run true to size with a relaxed fit.' },
   { q: 'Can I change or cancel my order?', a: 'Contact us within 2 hours of placing your order and we\'ll do our best to accommodate changes.' },
@@ -115,7 +115,7 @@ export default function Contact() {
             </div>
             <div className={styles.infoItem}>
               <span className={styles.infoLabel}>Hours</span>
-              <span className={styles.infoValue}>Mon–Fri, 9AM–6PM</span>
+              <span className={styles.infoValue}>Mon-Fri, 9AM-6PM</span>
             </div>
             <div className={styles.infoItem}>
               <span className={styles.infoLabel}>Social</span>

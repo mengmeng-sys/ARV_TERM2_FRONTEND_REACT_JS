@@ -1,16 +1,21 @@
-import React from 'react'
+// Cart.jsx - Single file version
+import { useCart } from '../context/CartContext'
 import styles from './Cart.module.css'
 
-export default function Cart({ items, onClose, onRemove, onCheckout }) {
+export default function Cart() {
+  const { items, cartOpen, closeCart, removeFromCart, clearCart } = useCart()
+  
+  if (!cartOpen) return null
+  
   const total = items.reduce((sum, item) => sum + item.price * item.qty, 0)
 
   return (
     <>
-      <div className={styles.overlay} onClick={onClose} />
+      <div className={styles.overlay} onClick={closeCart} />
       <aside className={styles.cart}>
         <div className={styles.header}>
           <span className={styles.title}>Cart ({items.length})</span>
-          <button className={styles.close} onClick={onClose}>✕</button>
+          <button className={styles.close} onClick={closeCart}>✕</button>
         </div>
 
         {items.length === 0 ? (
@@ -28,7 +33,7 @@ export default function Cart({ items, onClose, onRemove, onCheckout }) {
                     <span className={styles.itemName}>{item.name}</span>
                     <span className={styles.itemPrice}>${item.price} × {item.qty}</span>
                   </div>
-                  <button className={styles.remove} onClick={() => onRemove(item.id)}>✕</button>
+                  <button className={styles.remove} onClick={() => removeFromCart(item.id)}>✕</button>
                 </li>
               ))}
             </ul>
@@ -37,7 +42,7 @@ export default function Cart({ items, onClose, onRemove, onCheckout }) {
                 <span>Total</span>
                 <span>${total.toFixed(2)}</span>
               </div>
-              <button className={styles.checkout} onClick={onCheckout}>
+              <button className={styles.checkout} onClick={clearCart}>
                 Checkout
               </button>
             </div>

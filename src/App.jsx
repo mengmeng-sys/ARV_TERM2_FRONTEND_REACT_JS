@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
-import CartRoot from './components/CartRoot'
+import CartRoot from './components/Cart'
 
 import CatalogPage    from './Pages/Catalog'
 import ContactPage    from './Pages/Contact'

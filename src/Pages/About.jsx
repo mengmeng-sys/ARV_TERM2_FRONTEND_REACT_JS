@@ -20,7 +20,6 @@ export default function About() {
     <div className={styles.page}>
       <Navbar cartCount={0} onCartOpen={() => {}} />
 
-      {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <span className={styles.eyebrow}>Est. 2025</span>
@@ -32,7 +31,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* STORY */}
       <section className={styles.story}>
         <div className={styles.storyLabel}>Our Story</div>
         <div className={styles.storyText}>
@@ -42,7 +40,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* STATS */}
       <section className={styles.stats}>
         {[['2025', 'Founded'], ['100%', 'Premium fabrics'], ['< 500', 'Units per drop'], ['0', 'Compromises']].map(([n, l]) => (
           <div className={styles.statItem} key={l}>
@@ -52,7 +49,7 @@ export default function About() {
         ))}
       </section>
 
-      {/* VALUES */}
+
       <section className={styles.values}>
         <h2 className={styles.sectionTitle}>What we stand for</h2>
         <div className={styles.valuesGrid}>
@@ -65,7 +62,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* TEAM */}
       <section className={styles.team}>
         <h2 className={styles.sectionTitle}>The people behind it</h2>
         <div className={styles.teamGrid}>
@@ -80,7 +76,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* SPLIT CTA */}
       <section className={styles.cta}>
         <div className={styles.ctaImage}>
           <img src="/Home/left.png" alt="ARV" />

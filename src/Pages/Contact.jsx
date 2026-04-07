@@ -25,17 +25,14 @@ export default function Contact() {
     <div className={styles.page}>
       <Navbar cartCount={0} onCartOpen={() => {}} />
 
-      {/* HERO */}
       <section className={styles.hero}>
         <span className={styles.eyebrow}>Get in touch</span>
         <h1 className={styles.heroTitle}>We're real people.<br />Talk to us.</h1>
         <p className={styles.heroSub}>Questions, feedback, sizing help — we're here for all of it.</p>
       </section>
 
-      {/* CONTACT GRID */}
       <section className={styles.contactGrid}>
 
-        {/* FORM */}
         <div className={styles.formWrap}>
           <h2 className={styles.colTitle}>Send a message</h2>
           {sent ? (
@@ -101,7 +98,6 @@ export default function Contact() {
           )}
         </div>
 
-        {/* SIDEBAR */}
         <div className={styles.sidebar}>
           <div className={styles.infoBlock}>
             <h2 className={styles.colTitle}>Contact info</h2>

@@ -1,4 +1,3 @@
-// Cart.jsx - Single file version
 import { useCart } from '../context/CartContext'
 import styles from './Cart.module.css'
 

@@ -2,6 +2,7 @@
 // All reads/writes go through here so both client & admin share the same data.
 
 import { products as defaultProducts } from './products.js';
+import { users } from './defualtUser.js';
 
 const KEYS = {
   PRODUCTS:  'arv_products',
@@ -18,22 +19,32 @@ function seed() {
     const flat = Object.values(defaultProducts).flat();
     localStorage.setItem(KEYS.PRODUCTS, JSON.stringify(flat));
   }
-  // Users – seed an admin account
+
+  // Users – seed admin + default client users
   if (!localStorage.getItem(KEYS.USERS)) {
-    const admins = [
-      {
-        id: 'admin-1',
-        firstName: 'Admin',
-        lastName:  '',
-        email:     'admin@arv.com',
-        phone:     '',
-        password:  'admin1234',
-        role:      'admin',
-        createdAt: new Date().toISOString(),
-      },
+    const admin = {
+      id: 'admin-1',
+      firstName: 'Admin',
+      lastName:  '',
+      email:     'admin@arv.com',
+      phone:     '',
+      password:  'admin1234',
+      role:      'admin',
+      createdAt: new Date().toISOString(),
+    };
+
+    // Merge admin + your default users, add createdAt if missing
+    const allUsers = [
+      admin,
+      ...users.map(u => ({
+        ...u,
+        createdAt: u.createdAt || new Date().toISOString(),
+      })),
     ];
-    localStorage.setItem(KEYS.USERS, JSON.stringify(admins));
+
+    localStorage.setItem(KEYS.USERS, JSON.stringify(allUsers));
   }
+
   // Orders – start empty
   if (!localStorage.getItem(KEYS.ORDERS)) {
     localStorage.setItem(KEYS.ORDERS, JSON.stringify([]));
@@ -122,7 +133,6 @@ export function setCurrentUser(user) {
 
 export function logout() {
   localStorage.removeItem(KEYS.CURRENT);
-  // backwards-compat with old keys used by original code
   localStorage.removeItem('isLoggedIn');
   localStorage.removeItem('user');
 }

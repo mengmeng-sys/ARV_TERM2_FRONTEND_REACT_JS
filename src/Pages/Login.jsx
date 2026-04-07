@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "../Style/Signin.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import { login } from "../data/store.js";
+import { login, } from "../data/store.js";
 
 export default function SignIn() {
   const navigate = useNavigate();

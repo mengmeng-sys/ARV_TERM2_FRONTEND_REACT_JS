@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../Style/UserProfile.css";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { useCart } from "../context/CartContext";
 import Footer from "../components/Footer";
 import { getCurrentUser, updateUser, logout } from "../data/store.js";
 
@@ -12,6 +13,7 @@ const LockIcon   = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="n
 const LogoutIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" /></svg>;
 
 export default function UserProfile() {
+  const { cartCount, openCart } = useCart();
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [saved, setSaved] = useState(false);
@@ -36,7 +38,7 @@ export default function UserProfile() {
 
   return (
     <>
-      <Navbar />
+      <Navbar cartCount={cartCount} onCartOpen={openCart} />
       <div className="profile-root">
         <div className="profile-card">
           <div className="profile-image-panel">

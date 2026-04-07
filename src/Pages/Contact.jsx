@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
+import { useCart } from '../context/CartContext'
 import Footer from '../components/Footer'
 import styles from '../Style/Contact.module.css'
 
@@ -12,6 +13,7 @@ const faqs = [
 ]
 
 export default function Contact() {
+  const { cartCount, openCart } = useCart()
   const [open, setOpen] = useState(null)
   const [sent, setSent] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
@@ -23,7 +25,7 @@ export default function Contact() {
 
   return (
     <div className={styles.page}>
-      <Navbar cartCount={0} onCartOpen={() => {}} />
+      <Navbar cartCount={cartCount} onCartOpen={openCart} />
 
       <section className={styles.hero}>
         <span className={styles.eyebrow}>Get in touch</span>

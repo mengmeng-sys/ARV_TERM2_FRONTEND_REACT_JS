@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar'
+import { useCart } from '../context/CartContext'
 import Footer from '../components/Footer'
 import styles from '../Style/About.module.css'
 
@@ -16,9 +17,10 @@ const values = [
 ]
 
 export default function About() {
+  const { cartCount, openCart } = useCart()
   return (
     <div className={styles.page}>
-      <Navbar cartCount={0} onCartOpen={() => {}} />
+      <Navbar cartCount={cartCount} onCartOpen={openCart} />
 
       <section className={styles.hero}>
         <div className={styles.heroContent}>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Cart.module.css'
 
-export default function Cart({ items, onClose, onRemove }) {
+export default function Cart({ items, onClose, onRemove, onCheckout }) {
   const total = items.reduce((sum, item) => sum + item.price * item.qty, 0)
 
   return (
@@ -20,9 +20,10 @@ export default function Cart({ items, onClose, onRemove }) {
             <ul className={styles.items}>
               {items.map(item => (
                 <li key={item.id} className={styles.item}>
-                  {item.img ? (<img src={item.img} alt={item.name} className={styles.itemImage}/>
-                  ):(
-                  <div className={styles.swatch} style={{ background: item.color }}/>)}
+                  {item.img
+                    ? <img src={item.img} alt={item.name} className={styles.itemImage} />
+                    : <div className={styles.swatch} style={{ background: item.color }} />
+                  }
                   <div className={styles.itemInfo}>
                     <span className={styles.itemName}>{item.name}</span>
                     <span className={styles.itemPrice}>${item.price} × {item.qty}</span>
@@ -34,9 +35,11 @@ export default function Cart({ items, onClose, onRemove }) {
             <div className={styles.footer}>
               <div className={styles.total}>
                 <span>Total</span>
-                <span>${total}</span>
+                <span>${total.toFixed(2)}</span>
               </div>
-              <button className={styles.checkout}>Checkout</button>
+              <button className={styles.checkout} onClick={onCheckout}>
+                Checkout
+              </button>
             </div>
           </>
         )}

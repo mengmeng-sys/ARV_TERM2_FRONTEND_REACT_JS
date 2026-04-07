@@ -327,3 +327,56 @@
   .mission-content, .vision-content { padding: 40px 20px; }
   .vision-img-wrap { height: 280px; }
 }
+
+/* ── CAROUSEL DOTS ── */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-dot.active {
+  background: #111;
+  transform: scale(1.3);
+}
+
+/* ── PRODUCT CARD ADD HINT ── */
+.product-img-wrap {
+  position: relative;
+}
+
+.product-add-hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(17, 17, 17, 0.78);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 7px 0;
+  border-radius: 0 0 10px 10px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+}
+
+.product-card:hover .product-add-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
